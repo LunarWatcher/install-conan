@@ -1,0 +1,23 @@
+{
+  "name": "install-conan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LunarWatcher/install-conan.git"
+  },
+  "keywords": [],
+  "author": "Olivia Zoe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LunarWatcher/install-conan/issues"
+  },
+  "homepage": "https://github.com/LunarWatcher/install-conan#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.4"
+  }
+}
