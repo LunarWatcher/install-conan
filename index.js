@@ -24,15 +24,5 @@ let py = executeCommand("python -m pip install conan");
 // conan will execute in parallel with the install, 
 // which is relatively slow.
 py.on("exit", () => {
-    // Possibly unsupported on Windows
-    let CXX = core.getInput("CXX");
-    let CC = core.getInput("CC");
-
-    // Generate the conan profile command
-    let base = "conan profile new --detect default"
-    let command = 
-            (CXX == "" ? "" : "CXX=" + CXX + " ")
-            + (CC == "" ? "" : "CC=" + CC + " ")
-            + base;
-    executeCommand(command);
+    executeCommand("conan profile new --detect default");
 });
