@@ -1,0 +1,15 @@
+name: Install conan
+description: Installs Conan
+inputs:
+  CXX:
+    description: Which C++ compiler to use
+    default: ""
+  CC: 
+    description: Which C compiler to use
+    default: ""
+runs:
+  using: 'node12'
+  main: 'index.js'
+branding:
+  icon: code
+  color: pink
