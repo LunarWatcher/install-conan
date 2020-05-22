@@ -10,8 +10,10 @@ function executeCommand(command) {
         function(error, stdout, stderr) {
             console.log(stdout);
             console.log("stderr: " + stderr);
-            if (error != null) 
+            if (error != null) {
                 console.log("Command errored out: " + error);
+                process.exit(-3);
+            }
         });
 }
 
