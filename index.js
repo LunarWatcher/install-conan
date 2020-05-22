@@ -22,7 +22,7 @@ executeCommand("python -m pip install conan");
 // Possibly unsupported on Windows
 let CXX = core.getInput("CXX");
 let CC = core.getInput("CC");
-let conanProfile = core.get
+
 // Generate the conan profile command
 let base = "conan profile new --detect default"
 let command = 
