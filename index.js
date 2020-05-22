@@ -6,14 +6,13 @@ const exec = require("child_process").exec;
  * Wrapper function to execute a system command
  */
 function executeCommand(command) {
-    let child = exec (command, 
+    exec (command, 
         function(error, stdout, stderr) {
             console.log(stdout);
             console.log("stderr: " + stderr);
             if (error != null) 
                 console.log("Command errored out: " + error);
         });
-    child();
 }
 
 // Install Conan
