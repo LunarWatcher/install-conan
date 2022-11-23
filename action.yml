@@ -1,7 +1,7 @@
 name: Install conan
 description: Installs Conan
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'index.js'
 branding:
   icon: code
