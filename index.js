@@ -18,15 +18,11 @@ function executeCommand(command) {
 }
 
 // Install Conan
-let py = executeCommand("python -m pip install conan");
+let py = executeCommand("python -m pip install conan==1.54.0");
 
 // exec is async. Without this,
 // conan will execute in parallel with the install, 
 // which is relatively slow.
 py.on("exit", () => {
-    try {
-        executeCommand("conan profile detect default");
-    } catch (e) {
-        executeCommand("conan profile new --detect default");
-    }
+    executeCommand("conan profile detect default");
 });
