@@ -24,5 +24,9 @@ let py = executeCommand("python -m pip install conan");
 // conan will execute in parallel with the install, 
 // which is relatively slow.
 py.on("exit", () => {
-    executeCommand("conan profile new --detect default");
+    try {
+        executeCommand("conan profile detect default");
+    } catch (e) {
+        executeCommand("conan profile new --detect default");
+    }
 });
