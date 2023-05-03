@@ -18,7 +18,7 @@ function executeCommand(command) {
 }
 
 // Install Conan
-let py = executeCommand("python -m pip install conan==1.54.0");
+let py = executeCommand("python -m pip install conan<2.0.0");
 
 // exec is async. Without this,
 // conan will execute in parallel with the install, 
